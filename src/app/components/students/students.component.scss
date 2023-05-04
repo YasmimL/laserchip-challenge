@@ -1,0 +1,29 @@
+table {
+  width: 90%;
+
+  td,
+  th {
+    width: 18%;
+
+    &:last-child {
+      width: 6%;
+    }
+  }
+
+  th:last-child {
+    text-align: center;
+  }
+
+  .actions {
+    display: flex;
+
+    .btn-delete {
+      color: #b71c1c;
+    }
+  }
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
