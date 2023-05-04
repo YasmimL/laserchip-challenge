@@ -1,0 +1,57 @@
+<div class="container">
+  <h3 mat-dialog-title *ngIf="!data.student?.id">Adicionar Aluno</h3>
+  <h3 mat-dialog-title *ngIf="data.student?.id">Editar Aluno</h3>
+
+  <form
+    class="mat-dialog-content"
+    (ngSubmit)="(submit)"
+    [formGroup]="studentForm"
+  >
+    <div class="form">
+      <mat-form-field appearance="outline">
+        <mat-label>Nome</mat-label>
+        <input matInput placeholder="Nome" formControlName="name" />
+      </mat-form-field>
+    </div>
+
+    <div class="form">
+      <mat-form-field appearance="outline">
+        <mat-label>Sobrenome</mat-label>
+        <input matInput placeholder="Sobrenome" formControlName="lastName" />
+      </mat-form-field>
+    </div>
+
+    <div class="form" class="age-gender-inputs">
+      <mat-form-field appearance="outline">
+        <mat-label>Idade</mat-label>
+        <input matInput placeholder="Idade" formControlName="age" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Sexo</mat-label>
+        <mat-select formControlName="gender">
+          <mat-option
+            *ngFor="let enum of GenderEnum | keyvalue"
+            value="{{ enum.key }}"
+            >{{ enum.value }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions>
+      <button mat-button (click)="closeDialog()" mat-raised-button color="warn">
+        Cancelar
+      </button>
+      <button
+        mat-button
+        [mat-dialog-close]="true"
+        mat-raised-button
+        color="primary"
+        [disabled]="studentForm.invalid"
+      >
+        Confirmar
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.container > * {
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+  background-color: unset;
+}
+
+.age-gender-inputs {
+  display: flex;
+  justify-content: space-between;
+
+  > mat-form-field {
+    width: 49%;
+  }
+}
+
+.mat-mdc-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+
+  button {
+    height: 3rem;
+    text-transform: uppercase;
+  }
+}
+
+.mdc-dialog__title {
+  padding: 0;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+}

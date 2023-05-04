@@ -1,3 +1,18 @@
+.heading {
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    height: 2.8rem;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-weight: 300;
+    margin-top: 0;
+  }
+}
+
 table {
   width: 90%;
 
@@ -26,4 +41,10 @@ table {
 .mat-mdc-form-field {
   font-size: 14px;
   width: 100%;
+}
+
+:host ::ng-deep {
+  .mat-mdc-paginator-container {
+    margin-bottom: 0.2rem;
+  }
 }

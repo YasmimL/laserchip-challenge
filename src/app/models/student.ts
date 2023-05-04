@@ -2,10 +2,10 @@ import { Gender } from '../enums/gender';
 
 export class Student {
   constructor(
-    private id: number | null,
-    private name: string,
-    private lastName: string,
-    private age: number,
-    private gender: Gender
+    public id: number | null,
+    public name: string,
+    public lastName: string,
+    public age: number,
+    public gender: Gender
   ) {}
 }
