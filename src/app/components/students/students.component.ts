@@ -30,7 +30,7 @@ export class StudentsComponent implements AfterViewInit {
   constructor(
     private studentsService: StudentsService,
     public dialog: MatDialog,
-    private snackBar: MatSnackBar
+    public snackBar: MatSnackBar
   ) {
     this.dataSource = new MatTableDataSource(this.students);
   }

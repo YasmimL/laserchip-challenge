@@ -16,7 +16,7 @@ interface ApiStudent {
   providedIn: 'root',
 })
 export class StudentsService {
-  private baseUrl = 'https://api-laser-teste.herokuapp.com/alunos';
+  baseUrl = 'https://api-laser-teste.herokuapp.com/alunos';
   private getUniqueId: () => number;
 
   constructor(private http: HttpClient) {
