@@ -40,3 +40,9 @@
   font-weight: 400;
   font-size: 1.5rem;
 }
+
+@media only screen and (max-width: 345px) {
+  .mdc-dialog__actions button:first-child {
+    margin-bottom: 0.5rem;
+  }
+}

@@ -16,3 +16,9 @@
     text-transform: uppercase;
   }
 }
+
+@media only screen and (max-width: 337px) {
+  .mat-mdc-dialog-actions button:first-child {
+    margin-bottom: 0.5rem;
+  }
+}

@@ -17,15 +17,8 @@ interface ApiStudent {
 })
 export class StudentsService {
   baseUrl = 'https://api-laser-teste.herokuapp.com/alunos';
-  private getUniqueId: () => number;
 
-  constructor(private http: HttpClient) {
-    this.getUniqueId = (() => {
-      let _id = 20;
-
-      return () => _id++;
-    })();
-  }
+  constructor(private http: HttpClient) {}
 
   getStudents(): Observable<Student[]> {
     return this.http
@@ -74,5 +67,9 @@ export class StudentsService {
       idade: student.age,
       sexo: genderKeyFromValue(student.gender),
     };
+  }
+
+  private getUniqueId(): number {
+    return +new Date().getTime().toString().slice(-6);
   }
 }
