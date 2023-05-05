@@ -12,7 +12,7 @@ Este documento tem como objetivo fornecer uma visão geral da aplicação de CRU
 ## Execução da aplicação
 
 Para executar a aplicação, siga os seguintes passos:
-1. Clone o repositório em sua máquina local: 
+1. Clone o repositório em sua máquina local
 2. Instale as dependências necessárias: cd laserchip-challenge && npm install
 3. Inicie a aplicação: ng serve -o (A aplicação poderá ser acessada através do endereço http://localhost:4200/)
 
